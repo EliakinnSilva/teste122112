@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulário de Inscrição</title>
+ <link rel="stylesheet" href="css/lojinha.css">
+ <style>
+  .apr-bloco04 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="img/logoenoques.jpg" alt="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="cursos.html">Cursos ▼</a>
+          <ul class="submenu">
+            <li><a href="amigurim.html">Curso Amigurim</a></li>
+            <li><a href="xilogravura.html">Xilogravura</a></li>
+            <li><a href="pinturaemteceido.html">Pintura em tecido</a></li>
+            <li><a href="tapecçaria.html">Tapeçaria</a></li>
+            <li><a href="ceramica.html">Cerâmica</a></li>
+          </ul>
+        </li>
+
+        <li><a href="lojinha.html">Lojinha</a></li>
+        <!--<li><a href="carrinho.html">Carrinho de Compras</a></li>*/-->
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Página Contato -->
+  <section>
+    <h2>Inscreva-se!</h2>
+    <p>Em breve lhe responderemos</p>
+
+    <div class="apr-bloco04">
+      <form onsubmit="exibirMensagem(event);">
+        <select name="Curso" class="campo">
+          <option value="">Selecione o curso</option>
+          <option value="Amigurim em crochê">Amigurim em crochê</option>
+          <option value="Xilogravura">Xilogravura</option>
+          <option value="Cerâmica">Cerâmica</option>
+          <option value="Pintura em tecido">Pintura em tecido</option>
+          <option value="Tapeçaria">Tapeçaria</option>
+        </select>
+        <br>
+        <input type="text" name="Nome" placeholder="Nome" class="campo">
+        <br>
+        <input type="email" name="E-mail" placeholder="Email" class="campo">
+        <br>
+        <input type="tel" name="Telefone" placeholder="Telefone" class="campo">
+        <br>
+        <input type="submit" name="enviar" value="Enviar" class="enviar">
+      </form>
+    </div>
+
+  <!-- Rodapé -->
+  <footer class="footer2">
+    &copy; 2023 Enoque's Loja de Artes e Artesanatos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function exibirMensagem(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Processar os dados do formulário aqui
+
+      alert("Inscrição realizada com sucesso. Aguarde o e-mail de confirmação.");
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>
